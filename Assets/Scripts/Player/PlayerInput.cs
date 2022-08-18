@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
-    public float InputX { get; private set; }
-    public float InputY { get; private set; }
+    public float X { get; private set; }
+    public float Y { get; private set; }
     public float LeftClick { get; private set; }
     public bool RightClick { get; private set; }
+    public float MouseMoveX { get; private set; }
+    public float MouseMoveY { get; private set; }
 
     private void Update()
     {
-        InputX = Input.GetAxis("Horizontal");
-        InputY = Input.GetAxis("Vertical");
+        X = Input.GetAxis("Horizontal");
+        Y = Input.GetAxis("Vertical");
         LeftClick = Input.GetAxis("Fire1");
+        MouseMoveX = Input.GetAxis("Mouse X");
+        MouseMoveY = Input.GetAxis("Mouse Y");
 
         if (Input.GetMouseButton(1))
         {
