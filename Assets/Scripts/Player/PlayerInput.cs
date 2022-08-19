@@ -11,6 +11,8 @@ public class PlayerInput : MonoBehaviour
     public float MouseMoveX { get; private set; }
     public float MouseMoveY { get; private set; }
 
+    private float _distance = 3f;
+
     private void Update()
     {
         X = Input.GetAxis("Horizontal");
@@ -26,6 +28,18 @@ public class PlayerInput : MonoBehaviour
         else
         {
             RightClick = false;
+        }
+
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Debug.DrawRay(ray.origin, ray.direction * _distance, Color.green);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, _distance))
+        {
+            if (null != hit.transform.GetComponent<InteractiveObject>())
+            {
+                hit.transform.GetComponent<InteractiveObject>().Active();
+            }
         }
     }
 }
