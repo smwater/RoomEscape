@@ -36,10 +36,7 @@ public class PlayerInput : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, _distance))
         {
-            if (null != hit.transform.GetComponent<InteractiveObject>())
-            {
-                hit.transform.GetComponent<InteractiveObject>().Active();
-            }
+            hit.transform.GetComponent<InteractiveObject>()?.Active();
         }
     }
 }
