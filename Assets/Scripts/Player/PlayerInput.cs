@@ -11,7 +11,7 @@ public class PlayerInput : MonoBehaviour
     public float MouseMoveX { get; private set; }
     public float MouseMoveY { get; private set; }
 
-    private float _distance = 3f;
+    private float _distance = 4f;
 
     private void Update()
     {
