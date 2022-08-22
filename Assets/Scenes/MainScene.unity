@@ -2654,7 +2654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b34b93f07c51f4499fa1947e93449ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Number: 1
+  Number: 2
 --- !u!114 &742480416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2996,11 +2996,75 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5403839850839583037, guid: 2c955ce5cc6b1a542900b51ed266259c, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 6e134baca9b154265b12e6d080c74bb7, type: 2}
-    m_RemovedComponents: []
+    - target: {fileID: 4000011884112884, guid: 2c955ce5cc6b1a542900b51ed266259c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011884112884, guid: 2c955ce5cc6b1a542900b51ed266259c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011884112884, guid: 2c955ce5cc6b1a542900b51ed266259c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011884112884, guid: 2c955ce5cc6b1a542900b51ed266259c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013459059310, guid: 2c955ce5cc6b1a542900b51ed266259c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013459059310, guid: 2c955ce5cc6b1a542900b51ed266259c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013459059310, guid: 2c955ce5cc6b1a542900b51ed266259c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013459059310, guid: 2c955ce5cc6b1a542900b51ed266259c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013459059310, guid: 2c955ce5cc6b1a542900b51ed266259c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 65000013423189194, guid: 2c955ce5cc6b1a542900b51ed266259c, type: 3}
+      propertyPath: m_Size.z
+      value: 0.014157123
+      objectReference: {fileID: 0}
+    - target: {fileID: 65000013423189194, guid: 2c955ce5cc6b1a542900b51ed266259c, type: 3}
+      propertyPath: m_Center.x
+      value: 0.28999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 65000013423189194, guid: 2c955ce5cc6b1a542900b51ed266259c, type: 3}
+      propertyPath: m_Center.z
+      value: -0.012078558
+      objectReference: {fileID: 0}
+    - target: {fileID: 65000013513775204, guid: 2c955ce5cc6b1a542900b51ed266259c, type: 3}
+      propertyPath: m_Size.x
+      value: 0.61999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 65000013513775204, guid: 2c955ce5cc6b1a542900b51ed266259c, type: 3}
+      propertyPath: m_Size.z
+      value: 0.015399515
+      objectReference: {fileID: 0}
+    - target: {fileID: 65000013513775204, guid: 2c955ce5cc6b1a542900b51ed266259c, type: 3}
+      propertyPath: m_Center.x
+      value: -0.31000036
+      objectReference: {fileID: 0}
+    - target: {fileID: 65000013513775204, guid: 2c955ce5cc6b1a542900b51ed266259c, type: 3}
+      propertyPath: m_Center.z
+      value: -0.012699883
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114000014081552152, guid: 2c955ce5cc6b1a542900b51ed266259c, type: 3}
+    - {fileID: 114000014183735298, guid: 2c955ce5cc6b1a542900b51ed266259c, type: 3}
+    - {fileID: 114000013607175784, guid: 2c955ce5cc6b1a542900b51ed266259c, type: 3}
+    - {fileID: 114000012246477340, guid: 2c955ce5cc6b1a542900b51ed266259c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2c955ce5cc6b1a542900b51ed266259c, type: 3}
 --- !u!4 &832063496 stripped
 Transform:
@@ -6154,7 +6218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b34b93f07c51f4499fa1947e93449ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Number: 1
+  Number: 3
 --- !u!1 &1641152774
 GameObject:
   m_ObjectHideFlags: 0
