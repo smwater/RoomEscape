@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Drag : MonoBehaviour
+public class MoveObject : MonoBehaviour
 {
     private float _distance = 2.5f;
     private Rigidbody _rigidbody;
