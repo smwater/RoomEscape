@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33000011198867150}
   - component: {fileID: 23000013626302582}
   - component: {fileID: 64000013925471140}
-  - component: {fileID: 4733529699609935895}
   m_Layer: 0
   m_Name: PFB_Basket
   m_TagString: Untagged
@@ -99,15 +98,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300002, guid: b2faaff453e184e16b2caab0bf62ec2d, type: 3}
---- !u!114 &4733529699609935895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000012719644140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aed4f1e119883034b8a09399e035210b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

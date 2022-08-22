@@ -6,7 +6,7 @@ public class PlayerInput : MonoBehaviour
 {
     public float X { get; private set; }
     public float Y { get; private set; }
-    public float LeftClick { get; private set; }
+    public bool LeftClick { get; private set; }
     public bool RightClick { get; private set; }
     public float MouseMoveX { get; private set; }
     public float MouseMoveY { get; private set; }
@@ -17,9 +17,17 @@ public class PlayerInput : MonoBehaviour
     {
         X = Input.GetAxis("Horizontal");
         Y = Input.GetAxis("Vertical");
-        LeftClick = Input.GetAxis("Fire1");
         MouseMoveX = Input.GetAxis("Mouse X");
         MouseMoveY = Input.GetAxis("Mouse Y");
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            LeftClick = true;
+        }
+        else
+        {
+            LeftClick = false;
+        }
 
         if (Input.GetMouseButton(1))
         {
@@ -36,7 +44,14 @@ public class PlayerInput : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, _distance))
         {
-            hit.transform.GetComponent<InteractiveObject>()?.Active();
+            hit.transform.GetComponent<Lamp>()?.Active();
+            hit.transform.GetComponent<Door>()?.Active();
+
+            if (LeftClick)
+            {
+                hit.transform.GetComponent<Lamp>()?.Interact();
+                hit.transform.GetComponent<Door>()?.Interact();
+            }
         }
     }
 }
