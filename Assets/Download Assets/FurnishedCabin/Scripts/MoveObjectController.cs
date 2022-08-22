@@ -42,7 +42,7 @@
 //		setupGui();
 
 //	}
-		
+
 //	void OnTriggerEnter(Collider other)
 //	{		
 //		if (other.gameObject == player)		//player has collided with trigger
@@ -82,7 +82,7 @@
 //				{	//it's not so return;
 //					return;
 //				}
-					
+
 //				if (moveableObject != null)		//hit object must have MoveableDraw script attached
 //				{
 //					showInteractMsg = true;
@@ -139,11 +139,11 @@
 //		{
 //			Debug.Log(e.Message);
 //		}
-			
+
 //		return rtnVal;
 
 //	}
-		
+
 
 //	#region GUI Config
 

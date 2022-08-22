@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Door : MonoBehaviour, IInteractable
+public class Book : MonoBehaviour, IInteractable
 {
     private Outline _outline;
     private float _timer;
-    private Animator _animator;
-    private bool _onoff;
 
     private void Awake()
     {
@@ -16,8 +14,6 @@ public class Door : MonoBehaviour, IInteractable
         _outline.OutlineMode = Outline.Mode.OutlineAll;
         _outline.OutlineColor = Color.magenta;
         _outline.OutlineWidth = 5f;
-
-        _animator = GetComponent<Animator>();
 
         Inactive();
     }
@@ -45,10 +41,6 @@ public class Door : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        string keyword = "open";
-
-        _onoff = !_onoff;
-
-        _animator.SetBool(keyword, _onoff); 
+        
     }
 }

@@ -46,6 +46,7 @@ public class PlayerInput : MonoBehaviour
         {
             hit.transform.GetComponent<Lamp>()?.Active();
             hit.transform.GetComponent<Door>()?.Active();
+            hit.transform.GetComponent<Book>()?.Active();
 
             if (LeftClick)
             {
