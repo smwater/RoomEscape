@@ -47,11 +47,13 @@ public class PlayerInput : MonoBehaviour
             hit.transform.GetComponent<Lamp>()?.Active();
             hit.transform.GetComponent<Door>()?.Active();
             hit.transform.GetComponent<Book>()?.Active();
+            hit.transform.GetComponent<Item>()?.Active();
 
             if (LeftClick)
             {
                 hit.transform.GetComponent<Lamp>()?.Interact();
                 hit.transform.GetComponent<Door>()?.Interact();
+                hit.transform.GetComponent<Item>()?.Interact();
             }
         }
     }
