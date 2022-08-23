@@ -6,6 +6,7 @@ public class Lamp : MonoBehaviour, IInteractable
 {
     private Outline _outline;
     private float _timer;
+    private float _timeLimit = 0.1f;
     private GameObject[] _childs;
     private int _childCount;
     private bool _onoff;
@@ -35,7 +36,7 @@ public class Lamp : MonoBehaviour, IInteractable
     {
         _timer += Time.fixedDeltaTime;
 
-        if (_timer >= 0.1f)
+        if (_timer >= _timeLimit)
         {
             Inactive();
             _timer = 0f;
