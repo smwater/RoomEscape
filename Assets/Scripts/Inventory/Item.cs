@@ -6,7 +6,7 @@ public class Item : MonoBehaviour, IInteractable
 {
     private Outline _outline;
     private float _timer;
-    private float _timeLimit = 0.1f;
+    private readonly float _timeLimit = 0.1f;
 
     public enum ItemName
     {
