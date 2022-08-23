@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class Item : MonoBehaviour, IInteractable
 {
+    public Inventory Inventory;
+
     private Outline _outline;
     private float _timer;
     private readonly float _timeLimit = 0.1f;
 
-    public enum ItemName
+    public enum ItemType
     {
         Key,
         Paper
     }
 
-    public ItemName ThisItem;
+    public ItemType ItemName;
 
     private void Awake()
     {
@@ -50,6 +52,7 @@ public class Item : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        Inventory.Store(ItemName);
         gameObject.SetActive(false);
     }
 }
