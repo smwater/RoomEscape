@@ -43,7 +43,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4000013459059310}
   - component: {fileID: 65000013423189194}
-  - component: {fileID: 114000014081552152}
   - component: {fileID: 6429016549439153235}
   m_Layer: 0
   m_Name: grp_doorsL
@@ -81,19 +80,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.62, y: 0.52, z: 0.01}
   m_Center: {x: 0.29, y: 0, z: -0.01}
---- !u!114 &114000014081552152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000010247695670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e617ac95c55644f938929ee87c74b211, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectNumber: 1
 --- !u!114 &6429016549439153235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,7 +255,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4000012614448490}
   - component: {fileID: 65000011051335022}
-  - component: {fileID: 114000013607175784}
   m_Layer: 8
   m_Name: 'doorR_interact '
   m_TagString: Untagged
@@ -305,19 +290,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6, y: 0.5, z: 0.19}
   m_Center: {x: 0.07, y: 0.3, z: 0.11}
---- !u!114 &114000013607175784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000010748514882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e617ac95c55644f938929ee87c74b211, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectNumber: 2
 --- !u!1 &1000011057010452
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,7 +529,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4000011238391556}
   - component: {fileID: 65000014288398604}
-  - component: {fileID: 114000012246477340}
   m_Layer: 8
   m_Name: doorL_interact
   m_TagString: Untagged
@@ -593,19 +564,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6, y: 0.5, z: 0.19}
   m_Center: {x: 0.07, y: 0.3, z: 0.11}
---- !u!114 &114000012246477340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000013652651702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e617ac95c55644f938929ee87c74b211, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectNumber: 1
 --- !u!1 &1000013867835830
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,7 +574,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4000011884112884}
   - component: {fileID: 65000013513775204}
-  - component: {fileID: 114000014183735298}
   - component: {fileID: 4122973780737685088}
   m_Layer: 0
   m_Name: grp_doorsR
@@ -654,19 +611,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.62, y: 0.52, z: 0.01}
   m_Center: {x: -0.31, y: 0, z: -0.01}
---- !u!114 &114000014183735298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000013867835830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e617ac95c55644f938929ee87c74b211, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectNumber: 2
 --- !u!114 &4122973780737685088
 MonoBehaviour:
   m_ObjectHideFlags: 0
