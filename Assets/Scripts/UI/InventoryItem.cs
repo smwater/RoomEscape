@@ -6,13 +6,13 @@ using UnityEngine.UI;
 
 public class InventoryItem : MonoBehaviour//, IDragHandler, IEndDragHandler
 {
-    public enum EquipmentType
+    public enum ItemType
     {
         Key,
         Paper
     };
 
-    public EquipmentType EquipmentName;
+    public ItemType ItemName;
 
     public bool _itemActive { get; private set; }
 
@@ -31,29 +31,9 @@ public class InventoryItem : MonoBehaviour//, IDragHandler, IEndDragHandler
         GameManager.Instance.UseKey.RemoveListener(Use);
     }
 
-    //private float pivotIntervalY = 30f;
-    //private float parentIntervalY = 40f;
-
-    //private void OnMouseDrag()
-    //{
-    //    Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0f);
-    //    Vector3 objectPosition = Camera.main.ScreenToViewportPoint(mousePosition);
-    //    transform.position = objectPosition;
-    //}
-
-    //public void OnDrag(PointerEventData eventData)
-    //{
-    //    transform.position = new Vector3(eventData.position.x, eventData.position.y + pivotIntervalY, 0f);
-    //}
-
-    //public void OnEndDrag(PointerEventData eventData)
-    //{
-    //    transform.position = new Vector3(transform.parent.position.x, transform.parent.position.y + parentIntervalY, 0f);
-    //}
-
     public void Use()
     {
-        if (EquipmentName == EquipmentType.Key && _itemActive)
+        if (ItemName == ItemType.Key && _itemActive)
         {
             GameManager.Instance.Unlock.Invoke();
             Destroy(gameObject);
