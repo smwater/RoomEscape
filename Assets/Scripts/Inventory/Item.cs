@@ -52,7 +52,9 @@ public class Item : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        Inventory.Store(ItemName);
-        gameObject.SetActive(false);
+        if (Inventory.Store(ItemName))
+        {
+            gameObject.SetActive(false);
+        }
     }
 }

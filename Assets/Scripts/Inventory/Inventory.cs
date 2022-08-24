@@ -20,16 +20,18 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void Store(Item.ItemType itemName)
+    public bool Store(Item.ItemType itemName)
     {
         int blankSlotIndex = CheckCapacity();
 
         if (blankSlotIndex == -1)
         {
-            return;
+            return false;
         }
 
         GameObject item = Instantiate(Prefabs[(int)itemName], _slots[blankSlotIndex].transform);
+
+        return true;
     }
 
     private int CheckCapacity()
