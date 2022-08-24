@@ -48,4 +48,9 @@ public class InventoryItem : MonoBehaviour
     {
         _itemActive = !_itemActive;
     }
+
+    public void ItemInactive()
+    {
+        _itemActive = false;
+    }
 }
