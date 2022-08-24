@@ -10,6 +10,7 @@ public class Door : MonoBehaviour, IInteractable
     private Animator _animator;
     private bool _onoff;
     private int _doorNum;
+    private KeyLock _keyLock;
 
     private void Awake()
     {
@@ -26,6 +27,11 @@ public class Door : MonoBehaviour, IInteractable
         if (_animator == null)
         {
             _animator = GetComponentInParent<Transform>().GetComponentInParent<Transform>().GetComponentInParent<Animator>();
+        }
+
+        if (GetComponent<KeyLock>() != null)
+        {
+            _keyLock = GetComponent<KeyLock>();
         }
     }
 
@@ -52,6 +58,11 @@ public class Door : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        if (_keyLock.IsLock == true)
+        {
+            return;
+        }
+
         string keyword = "open";
         if (gameObject.GetComponent<DoorNumber>() != null)
         {
