@@ -44,4 +44,14 @@ public class Book : MonoBehaviour, IInteractable
     {
         
     }
+
+    private float _distance = 2.5f;
+
+    private void OnMouseDrag()
+    {
+        Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, _distance);
+        Vector3 objectPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+        transform.position = objectPosition;
+        transform.rotation = Quaternion.Euler(0f, 90f, 0f);
+    }
 }

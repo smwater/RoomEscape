@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 23011252123664936}
   - component: {fileID: 220666295323789722}
   - component: {fileID: 7861388847546037159}
-  - component: {fileID: 8831494759725400103}
   - component: {fileID: 1298347588586433996}
   m_Layer: 0
   m_Name: Book1
@@ -112,18 +111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3af4faaff5501a4eb302ffa4cf7a355, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8831494759725400103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1720083587289550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7318c67fafca4f04b9432531353cf1f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &1298347588586433996
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -138,5 +125,5 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 0
   m_CollisionDetection: 0
