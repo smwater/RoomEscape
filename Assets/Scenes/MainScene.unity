@@ -155,6 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4e9dca7417d6f7418ca555b1925a598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InventoryItem: {fileID: 0}
 --- !u!4 &35617626
 Transform:
   m_ObjectHideFlags: 0
@@ -4425,6 +4426,10 @@ PrefabInstance:
     - target: {fileID: 2656026909556406564, guid: 43eee9f9554092940955b82111321ef9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8599225754459074761, guid: 43eee9f9554092940955b82111321ef9, type: 3}
+      propertyPath: m_TagString
+      value: KeyLock
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43eee9f9554092940955b82111321ef9, type: 3}

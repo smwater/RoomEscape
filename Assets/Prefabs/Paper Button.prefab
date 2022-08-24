@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5913055445077861078}
   - component: {fileID: 709459913247690609}
   - component: {fileID: 1621453870634108704}
+  - component: {fileID: -6999772771864336643}
   m_Layer: 5
   m_Name: Paper Button
   m_TagString: Untagged
@@ -120,4 +121,30 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 709459913247690609}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -6999772771864336643}
+        m_TargetAssemblyTypeName: InventoryItem, Assembly-CSharp
+        m_MethodName: ItemActiveInactive
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &-6999772771864336643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6690931091097731628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33bd56c806b967a498a7b869adcfd9a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KeyLock: {fileID: 0}
+  EquipmentName: 0

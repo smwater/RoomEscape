@@ -11,8 +11,18 @@ public class KeyLock : MonoBehaviour
         IsLock = true;
     }
 
+    private void OnEnable()
+    {
+        GameManager.Instance.Unlock.AddListener(Unlock);
+    }
+
     public void Unlock()
     {
         IsLock = false;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.Instance.Unlock.RemoveListener(Unlock);
     }
 }
