@@ -4,21 +4,25 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class InventoryItem : MonoBehaviour//, IDragHandler, IEndDragHandler
+public class InventoryItem : MonoBehaviour
 {
-    public enum ItemType
+    public enum ItemNames
     {
         Key,
-        Paper
+        Paper1,
+        Paper2,
+        Paper3,
+        Paper4,
+        PaperFinal
     };
 
-    public ItemType ItemName;
+    public ItemNames ItemName;
 
     public bool _itemActive { get; private set; }
 
     private void OnEnable()
     {
-        GameManager.Instance.UseKey.AddListener(Use);
+        GameManager.Instance.UseKey.AddListener(UseKey);
     }
 
     private void Awake()
@@ -28,12 +32,12 @@ public class InventoryItem : MonoBehaviour//, IDragHandler, IEndDragHandler
 
     private void OnDisable()
     {
-        GameManager.Instance.UseKey.RemoveListener(Use);
+        GameManager.Instance.UseKey.RemoveListener(UseKey);
     }
 
-    public void Use()
+    public void UseKey()
     {
-        if (ItemName == ItemType.Key && _itemActive)
+        if (ItemName == ItemNames.Key && _itemActive)
         {
             GameManager.Instance.Unlock.Invoke();
             Destroy(gameObject);

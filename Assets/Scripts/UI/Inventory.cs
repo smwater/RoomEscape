@@ -20,7 +20,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public bool Store(Item.ItemType itemName)
+    public bool Store(Item.ItemNames itemName)
     {
         int blankSlotIndex = CheckCapacity();
 

@@ -10,13 +10,16 @@ public class Item : MonoBehaviour, IInteractable
     private float _timer;
     private readonly float _timeLimit = 0.1f;
 
-    public enum ItemType
+    public enum ItemNames
     {
         Key,
-        Paper
+        Paper1,
+        Paper2,
+        Paper3,
+        Paper4
     }
 
-    public ItemType ItemName;
+    public ItemNames ItemName;
 
     private void Awake()
     {
