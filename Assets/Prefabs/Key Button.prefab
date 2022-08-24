@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2621722675444925381}
   m_Layer: 5
   m_Name: Key Button
-  m_TagString: KeyLock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,7 +131,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: ItemActiveInactive
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2621722675444925381
@@ -146,5 +146,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33bd56c806b967a498a7b869adcfd9a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KeyLock: {fileID: 0}
-  EquipmentName: 0
+  ItemName: 0
