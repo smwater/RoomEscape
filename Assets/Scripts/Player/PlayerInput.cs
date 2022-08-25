@@ -70,7 +70,7 @@ public class PlayerInput : MonoBehaviour
 
             if (ItemUse && hit.transform.tag == "KeyLock")
             {
-                GameManager.Instance.UseKey.Invoke();
+                GameManager.Instance.UseItem.Invoke();
             }
         }
     }

@@ -8,7 +8,7 @@ public class GameManager : SingletonBehaviour<GameManager>
     public bool PlayerCanMovement;
 
     public UnityEvent Unlock = new UnityEvent();
-    public UnityEvent UseKey = new UnityEvent();
+    public UnityEvent UseItem = new UnityEvent();
     public UnityEvent ViewItemDetail = new UnityEvent();
     public UnityEvent CloseItemDetail = new UnityEvent();
 }

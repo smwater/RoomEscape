@@ -24,7 +24,7 @@ public class InventoryItem : MonoBehaviour
 
     private void OnEnable()
     {
-        GameManager.Instance.UseKey.AddListener(Use);
+        GameManager.Instance.UseItem.AddListener(Use);
         GameManager.Instance.CloseItemDetail.AddListener(Inactive);
     }
 
@@ -48,7 +48,7 @@ public class InventoryItem : MonoBehaviour
 
     private void OnDisable()
     {
-        GameManager.Instance.UseKey.RemoveListener(Use);
+        GameManager.Instance.UseItem.RemoveListener(Use);
         GameManager.Instance.CloseItemDetail.RemoveListener(Inactive);
     }
 
