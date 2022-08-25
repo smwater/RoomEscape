@@ -34,6 +34,7 @@ public class Inventory : MonoBehaviour
         }
 
         GameObject item = Instantiate(Prefabs[(int)itemName], _slots[blankSlotIndex].transform);
+        _slots[blankSlotIndex].GetComponent<InventorySlot>().SlotIndex = blankSlotIndex;
 
         return true;
     }
@@ -58,14 +59,13 @@ public class Inventory : MonoBehaviour
         return blankSlotIndex;
     }
 
-    public void Select(int slotIndex)
+    public void SingleSelect(int slotIndex)
     {
-        if (_selectedSlotIndex != -1)
+        if (_selectedSlotIndex != -1 && slotIndex != _selectedSlotIndex)
         {
-            _inventorySlots[_selectedSlotIndex].Deselect();
+            _inventorySlots[_selectedSlotIndex].GetComponentInChildren<InventoryItem>().ItemInactive();
         }    
 
         _selectedSlotIndex = slotIndex;
-        _inventorySlots[_selectedSlotIndex].Select();
     }
 }
