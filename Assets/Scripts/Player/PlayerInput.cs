@@ -52,7 +52,7 @@ public class PlayerInput : MonoBehaviour
         Debug.DrawRay(ray.origin, ray.direction * _distance, Color.green);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, _distance))
+        if (Physics.Raycast(ray, out hit, _distance) && GameManager.Instance.PlayerCanMovement)
         {
             hit.transform.GetComponent<Lamp>()?.Active();
             hit.transform.GetComponent<Door>()?.Active();
