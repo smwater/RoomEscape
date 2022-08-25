@@ -55,17 +55,13 @@ public class PlayerInput : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, _distance, layerMask) && GameManager.Instance.PlayerCanMovement)
         {
-            
-            hit.transform.GetComponent<Lamp>()?.Active();
-            hit.transform.GetComponent<Door>()?.Active();
-            hit.transform.GetComponent<Book>()?.Active();
-            hit.transform.GetComponent<Item>()?.Active();
+            IInteractable interactable = hit.transform.GetComponent<IInteractable>();
+
+            interactable.Active();
 
             if (LeftClick)
             {
-                hit.transform.GetComponent<Lamp>()?.Interact();
-                hit.transform.GetComponent<Door>()?.Interact();
-                hit.transform.GetComponent<Item>()?.Interact();
+                interactable.Interact();
             }
 
             if (ItemUse && hit.transform.tag == "KeyLock")
