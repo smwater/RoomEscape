@@ -18,25 +18,25 @@ public class InventoryItem : MonoBehaviour
 
     public ItemNames ItemName;
 
-    public bool _itemActive { get; private set; }
+    public bool _active { get; private set; }
 
     private InventorySlot _slot;
 
     private void OnEnable()
     {
-        GameManager.Instance.UseKey.AddListener(UseKey);
-        GameManager.Instance.CloseItemDetail.AddListener(ItemInactive);
+        GameManager.Instance.UseKey.AddListener(Use);
+        GameManager.Instance.CloseItemDetail.AddListener(Inactive);
     }
 
     private void Awake()
     {
-        _itemActive = false;
+        _active = false;
         _slot = GetComponentInParent<InventorySlot>();
     }
 
     private void Update()
     {
-        if (_itemActive)
+        if (_active)
         {
             _slot.Select();
         }
@@ -48,13 +48,13 @@ public class InventoryItem : MonoBehaviour
 
     private void OnDisable()
     {
-        GameManager.Instance.UseKey.RemoveListener(UseKey);
-        GameManager.Instance.CloseItemDetail.RemoveListener(ItemInactive);
+        GameManager.Instance.UseKey.RemoveListener(Use);
+        GameManager.Instance.CloseItemDetail.RemoveListener(Inactive);
     }
 
-    public void UseKey()
+    public void Use()
     {
-        if (ItemName == ItemNames.Key && _itemActive)
+        if (ItemName == ItemNames.Key && _active)
         {
             GameManager.Instance.Unlock.Invoke();
             _slot.NotExsited();
@@ -62,19 +62,19 @@ public class InventoryItem : MonoBehaviour
         }
     }
 
-    public void ItemActiveInactive()
+    public void ActiveInactive()
     {
-        _itemActive = !_itemActive;
+        _active = !_active;
     }
 
-    public void ItemInactive()
+    public void Inactive()
     {
-        _itemActive = false;
+        _active = false;
     }
 
     public void ShowDetail()
     {
-        if (ItemName == ItemNames.Paper1 && _itemActive)
+        if (ItemName == ItemNames.Paper1 && _active)
         {
             GameManager.Instance.ViewItemDetail.Invoke();
         }
