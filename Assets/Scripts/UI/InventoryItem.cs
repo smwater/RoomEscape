@@ -69,4 +69,12 @@ public class InventoryItem : MonoBehaviour
     {
         _itemActive = false;
     }
+
+    public void ShowDetail()
+    {
+        if (ItemName == ItemNames.Paper1 && _itemActive)
+        {
+            GameManager.Instance.ViewItemDetail.Invoke();
+        }
+    }
 }

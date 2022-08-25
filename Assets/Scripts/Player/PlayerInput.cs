@@ -10,7 +10,7 @@ public class PlayerInput : MonoBehaviour
     public bool RightClick { get; private set; }
     public float MouseMoveX { get; private set; }
     public float MouseMoveY { get; private set; }
-    public bool PressE { get; private set; }
+    public bool ItemUse { get; private set; }
 
     private float _distance = 4f;
 
@@ -41,11 +41,11 @@ public class PlayerInput : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            PressE = true;
+            ItemUse = true;
         }
         else
         {
-            PressE = false;
+            ItemUse = false;
         }
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -66,7 +66,7 @@ public class PlayerInput : MonoBehaviour
                 hit.transform.GetComponent<Item>()?.Interact();
             }
 
-            if (PressE && hit.transform.tag == "KeyLock")
+            if (ItemUse && hit.transform.tag == "KeyLock")
             {
                 GameManager.Instance.UseKey.Invoke();
             }
