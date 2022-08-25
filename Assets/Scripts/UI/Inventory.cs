@@ -63,7 +63,7 @@ public class Inventory : MonoBehaviour
     {
         if (_selectedSlotIndex != -1 && slotIndex != _selectedSlotIndex)
         {
-            _inventorySlots[_selectedSlotIndex].GetComponentInChildren<InventoryItem>().ItemInactive();
+            _inventorySlots[_selectedSlotIndex].GetComponentInChildren<InventoryItem>()?.ItemInactive();
         }    
 
         _selectedSlotIndex = slotIndex;
