@@ -51,9 +51,11 @@ public class PlayerInput : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         Debug.DrawRay(ray.origin, ray.direction * _distance, Color.green);
         RaycastHit hit;
+        int layerMask = 1 << LayerMask.NameToLayer("Interactive Item");
 
-        if (Physics.Raycast(ray, out hit, _distance) && GameManager.Instance.PlayerCanMovement)
+        if (Physics.Raycast(ray, out hit, _distance, layerMask) && GameManager.Instance.PlayerCanMovement)
         {
+            
             hit.transform.GetComponent<Lamp>()?.Active();
             hit.transform.GetComponent<Door>()?.Active();
             hit.transform.GetComponent<Book>()?.Active();
