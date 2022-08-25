@@ -62,7 +62,7 @@ public class Inventory : MonoBehaviour
     {
         if (_selectedSlotIndex != -1)
         {
-            _inventorySlots[_selectedSlotIndex].UnSelect();
+            _inventorySlots[_selectedSlotIndex].Deselect();
         }    
 
         _selectedSlotIndex = slotIndex;
