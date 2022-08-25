@@ -25,6 +25,7 @@ public class InventoryItem : MonoBehaviour
     private void OnEnable()
     {
         GameManager.Instance.UseKey.AddListener(UseKey);
+        GameManager.Instance.CloseItemDetail.AddListener(ItemInactive);
     }
 
     private void Awake()
@@ -48,6 +49,7 @@ public class InventoryItem : MonoBehaviour
     private void OnDisable()
     {
         GameManager.Instance.UseKey.RemoveListener(UseKey);
+        GameManager.Instance.CloseItemDetail.RemoveListener(ItemInactive);
     }
 
     public void UseKey()
