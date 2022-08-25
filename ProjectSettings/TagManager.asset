@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Hand
   - KeyLock
+  - ItemDetail
   layers:
   - Default
   - TransparentFX

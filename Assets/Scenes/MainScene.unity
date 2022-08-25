@@ -3749,6 +3749,9 @@ MonoBehaviour:
   UseKey:
     m_PersistentCalls:
       m_Calls: []
+  MergePaper:
+    m_PersistentCalls:
+      m_Calls: []
   ViewItemDetail:
     m_PersistentCalls:
       m_Calls: []
@@ -7882,7 +7885,7 @@ GameObject:
   - component: {fileID: 1627809139}
   m_Layer: 5
   m_Name: Background
-  m_TagString: Untagged
+  m_TagString: ItemDetail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

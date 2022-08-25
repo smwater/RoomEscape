@@ -24,8 +24,9 @@ public class InventoryItem : MonoBehaviour
 
     private void OnEnable()
     {
-        GameManager.Instance.UseItem.AddListener(Use);
+        GameManager.Instance.UseKey.AddListener(UseKey);
         GameManager.Instance.CloseItemDetail.AddListener(Inactive);
+        GameManager.Instance.MergePaper.AddListener(MergePaper);
     }
 
     private void Awake()
@@ -48,11 +49,12 @@ public class InventoryItem : MonoBehaviour
 
     private void OnDisable()
     {
-        GameManager.Instance.UseItem.RemoveListener(Use);
+        GameManager.Instance.UseKey.RemoveListener(UseKey);
         GameManager.Instance.CloseItemDetail.RemoveListener(Inactive);
+        GameManager.Instance.MergePaper.RemoveListener(MergePaper);
     }
 
-    public void Use()
+    public void UseKey()
     {
         if (ItemName == ItemNames.Key && _active)
         {
@@ -60,6 +62,28 @@ public class InventoryItem : MonoBehaviour
             _slot.NotExsited();
             Destroy(gameObject);
         }
+    }
+
+    public void MergePaper()
+    {
+        if (ItemName == ItemNames.Paper2 && _active)
+        {
+            _slot.NotExsited();
+            Destroy(gameObject);
+        }
+
+        if (ItemName == ItemNames.Paper3 && _active)
+        {
+            _slot.NotExsited();
+            Destroy(gameObject);
+        }
+
+        if (ItemName == ItemNames.Paper4 && _active)
+        {
+            _slot.NotExsited();
+            Destroy(gameObject);
+        }
+
     }
 
     public void ActiveInactive()
