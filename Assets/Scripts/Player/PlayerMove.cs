@@ -6,8 +6,6 @@ public class PlayerMove : MonoBehaviour
 {
     public Transform HeadTransform;
 
-    private bool _isMovement;
-
     private float _moveSpeed = 5f;
     private float _positionX;
     private float _positionZ;
@@ -23,7 +21,7 @@ public class PlayerMove : MonoBehaviour
     private void Awake()
     {
         _input = GetComponent<PlayerInput>();
-        _isMovement = true;
+        GameManager.Instance.PlayerCanMovement = true;
     }
 
     private void OnEnable()
@@ -34,7 +32,7 @@ public class PlayerMove : MonoBehaviour
 
     private void Update()
     {
-        if (_isMovement)
+        if (GameManager.Instance.PlayerCanMovement)
         {
             _positionX = _input.X * _moveSpeed * Time.deltaTime;
             _positionZ = _input.Y * _moveSpeed * Time.deltaTime;
@@ -65,11 +63,11 @@ public class PlayerMove : MonoBehaviour
 
     public void MovementOn()
     {
-        _isMovement = true;
+        GameManager.Instance.PlayerCanMovement = true;
     }
 
     public void MovementOff()
     {
-        _isMovement = false;
+        GameManager.Instance.PlayerCanMovement = false;
     }
 }
