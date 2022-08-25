@@ -47,7 +47,7 @@ public class PlayerMove : MonoBehaviour
                 _rotateX += _rotateMoveX;
                 _rotateY = transform.eulerAngles.y + _rotateMoveY;
 
-                _rotateX = Mathf.Clamp(_rotateX, -90, 90);
+                _rotateX = Mathf.Clamp(_rotateX, -90, 50);
 
                 transform.eulerAngles = new Vector3(0f, _rotateY, 0f);
                 HeadTransform.eulerAngles = new Vector3(_rotateX, _rotateY, 0f);
