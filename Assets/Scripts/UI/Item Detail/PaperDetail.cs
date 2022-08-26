@@ -31,6 +31,11 @@ public class PaperDetail : MonoBehaviour
 
     public void Add()
     {
+        if (_paperIndex >= _paperCount - 1)
+        {
+            return;
+        }
+
         _papers[_paperIndex].SetActive(true);
         _paperIndex++;
     }
