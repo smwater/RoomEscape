@@ -58,12 +58,6 @@ public class PlayerInput : MonoBehaviour
             {
                 GameManager.Instance.UseKey.Invoke();
             }
-
-            if (LeftClick && hit.transform.tag == "ItemDetail")
-            {
-                Debug.Log("지금 이거 인식이 안됨");
-                GameManager.Instance.MergePaper.Invoke();
-            }
         }
     }
 }
