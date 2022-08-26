@@ -15,6 +15,8 @@ public class PlayerInput : MonoBehaviour
 
     private void Update()
     {
+        X = Y = MouseMoveX = MouseMoveY = 0f;
+
         X = Input.GetAxis("Horizontal");
         Y = Input.GetAxis("Vertical");
         MouseMoveX = Input.GetAxis("Mouse X");
