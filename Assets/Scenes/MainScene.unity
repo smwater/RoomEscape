@@ -3357,6 +3357,7 @@ GameObject:
   m_Component:
   - component: {fileID: 744736212}
   - component: {fileID: 744736214}
+  - component: {fileID: 744736215}
   m_Layer: 5
   m_Name: Item Detail Camera
   m_TagString: Untagged
@@ -3410,12 +3411,12 @@ Camera:
   near clip plane: 0.3
   far clip plane: 20
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 96
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -3427,6 +3428,18 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &744736215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744736211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e7ee2bb59a661344a97784710d9c47e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &745168085
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3601,6 +3614,7 @@ GameObject:
   m_Component:
   - component: {fileID: 777090444}
   - component: {fileID: 777090445}
+  - component: {fileID: 777090446}
   m_Layer: 6
   m_Name: Item Paper 1
   m_TagString: Untagged
@@ -3675,6 +3689,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &777090446
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777090443}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.0647125, y: 2.2891128, z: 0.19999999}
+  m_Center: {x: -1.464325, y: 0.85542834, z: -0.00000047683716}
 --- !u!1 &806864107
 GameObject:
   m_ObjectHideFlags: 0
@@ -4494,6 +4521,7 @@ GameObject:
   m_Component:
   - component: {fileID: 961816326}
   - component: {fileID: 961816327}
+  - component: {fileID: 961816328}
   m_Layer: 6
   m_Name: Item Paper Merge
   m_TagString: Untagged
@@ -4568,6 +4596,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &961816328
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961816325}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.9999995, y: 3.9999998, z: 0.19999999}
+  m_Center: {x: 0.000059127808, y: -0.000015228987, z: -0.00000047683716}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -5727,7 +5768,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!224 &1243349831
 RectTransform:
@@ -6101,6 +6142,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1282355187}
   - component: {fileID: 1282355188}
+  - component: {fileID: 1282355189}
   m_Layer: 6
   m_Name: Item Paper 4
   m_TagString: Untagged
@@ -6175,6 +6217,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &1282355189
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282355186}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.7051907, y: 2.1891303, z: 0.19999999}
+  m_Center: {x: 1.1474638, y: -0.90543485, z: -0.00000047683716}
 --- !u!1001 &1291497133
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6664,6 +6719,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1365715703}
   - component: {fileID: 1365715704}
+  - component: {fileID: 1365715705}
   m_Layer: 6
   m_Name: Item Paper 2
   m_TagString: Untagged
@@ -6738,6 +6794,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &1365715705
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365715702}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.381956, y: 2.4921923, z: 0.19999999}
+  m_Center: {x: 1.3090811, y: 0.75388867, z: -0.00000047683716}
 --- !u!1 &1369310741
 GameObject:
   m_ObjectHideFlags: 0
@@ -7896,6 +7965,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1637372272}
   - component: {fileID: 1637372273}
+  - component: {fileID: 1637372274}
   m_Layer: 6
   m_Name: Item Paper 3
   m_TagString: Untagged
@@ -7970,6 +8040,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &1637372274
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637372271}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.7222214, y: 2.400073, z: 0.19999999}
+  m_Center: {x: -1.1388321, y: -0.7999634, z: -0.00000047683716}
 --- !u!1 &1641152774
 GameObject:
   m_ObjectHideFlags: 0
@@ -8389,7 +8472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5254902}
+  m_Color: {r: 0.09433961, g: 0.09389461, b: 0.09389461, a: 0.5254902}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10581,7 +10664,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2112284570
 Transform:
   m_ObjectHideFlags: 0
