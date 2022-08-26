@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemDetail : MonoBehaviour
+public class ItemDetailUI : MonoBehaviour
 {
     private GameObject[] _childs;
     private int _childCount;
