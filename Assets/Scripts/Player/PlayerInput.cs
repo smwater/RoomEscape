@@ -10,7 +10,6 @@ public class PlayerInput : MonoBehaviour
     public bool RightClick { get; private set; }
     public float MouseMoveX { get; private set; }
     public float MouseMoveY { get; private set; }
-    public bool ItemUse { get; private set; }
 
     private float _distance = 4f;
 
@@ -39,15 +38,6 @@ public class PlayerInput : MonoBehaviour
             RightClick = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            ItemUse = true;
-        }
-        else
-        {
-            ItemUse = false;
-        }
-
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         Debug.DrawRay(ray.origin, ray.direction * _distance, Color.green);
         RaycastHit hit;
@@ -64,12 +54,12 @@ public class PlayerInput : MonoBehaviour
                 interactable.Interact();
             }
 
-            if (ItemUse && hit.transform.tag == "KeyLock")
+            if (LeftClick && hit.transform.tag == "KeyLock")
             {
                 GameManager.Instance.UseKey.Invoke();
             }
 
-            if (ItemUse && hit.transform.tag == "ItemDetail")
+            if (LeftClick && hit.transform.tag == "ItemDetail")
             {
                 Debug.Log("지금 이거 인식이 안됨");
                 GameManager.Instance.MergePaper.Invoke();
