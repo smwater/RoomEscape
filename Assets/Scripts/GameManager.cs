@@ -13,4 +13,5 @@ public class GameManager : SingletonBehaviour<GameManager>
     public UnityEvent MergePaper = new UnityEvent();
     public UnityEvent ViewItemDetail = new UnityEvent();
     public UnityEvent CloseItemDetail = new UnityEvent();
+    public UnityEvent OnPuzzleBoard = new UnityEvent();
 }

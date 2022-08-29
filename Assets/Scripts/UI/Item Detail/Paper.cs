@@ -6,6 +6,7 @@ public class Paper : MonoBehaviour
 {
     private GameObject[] _papers;
     private int _paperCount;
+    private int _mergeCount = 0;
 
     private void Awake()
     {
@@ -41,5 +42,11 @@ public class Paper : MonoBehaviour
         }
 
         _papers[index].SetActive(true);
+        _mergeCount++;
+
+        if (_mergeCount == 3)
+        {
+            GameManager.Instance.OnPuzzleBoard.Invoke();
+        }
     }
 }
