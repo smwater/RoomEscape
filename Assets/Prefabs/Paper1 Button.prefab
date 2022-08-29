@@ -124,7 +124,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: -6999772771864336643}
         m_TargetAssemblyTypeName: InventoryItem, Assembly-CSharp
-        m_MethodName: ActiveInactive
+        m_MethodName: TogleActive
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

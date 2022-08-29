@@ -16,7 +16,7 @@ public class Item : MonoBehaviour, IInteractable
         Paper1,
         Paper2,
         Paper3,
-        Paper4
+        Paper4,
     }
 
     public ItemNames ItemName;

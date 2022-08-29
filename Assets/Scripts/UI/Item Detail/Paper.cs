@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Paper : MonoBehaviour
 {
-    private int _paperIndex = 1;
     private GameObject[] _papers;
     private int _paperCount;
 
@@ -31,12 +30,16 @@ public class Paper : MonoBehaviour
 
     public void Add()
     {
-        if (_paperIndex >= _paperCount - 1)
+        int index = 0;
+
+        foreach (var item in GameManager.Instance.ItemHashmap)
         {
-            return;
+            if (item.Value == true)
+            {
+                index = (int)item.Key - 1;
+            }
         }
 
-        _papers[_paperIndex].SetActive(true);
-        _paperIndex++;
+        _papers[index].SetActive(true);
     }
 }

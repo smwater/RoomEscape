@@ -13,7 +13,7 @@ public class InventoryItem : MonoBehaviour
         Paper2,
         Paper3,
         Paper4,
-        PaperFinal
+        PaperMerge
     };
 
     public ItemNames ItemName;
@@ -86,9 +86,18 @@ public class InventoryItem : MonoBehaviour
 
     }
 
-    public void ActiveInactive()
+    public void TogleActive()
     {
         _active = !_active;
+
+        if (_active)
+        {
+            GameManager.Instance.ItemHashmap.Add(ItemName, true);
+        }
+        else
+        {
+            GameManager.Instance.ItemHashmap.Remove(ItemName);
+        }
     }
 
     public void Inactive()
