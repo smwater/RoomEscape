@@ -35,14 +35,16 @@ public class Paper : MonoBehaviour
 
         foreach (var item in GameManager.Instance.ItemHashmap)
         {
-            if (item.Value == true)
+            if (item.Value == true && item.Key != InventoryItem.ItemNames.Paper1)
             {
                 index = (int)item.Key - 1;
+                _mergeCount++;
             }
         }
 
+        GameManager.Instance.ItemHashmap.Remove((InventoryItem.ItemNames)index + 1);
+
         _papers[index].SetActive(true);
-        _mergeCount++;
 
         if (_mergeCount == 3)
         {
