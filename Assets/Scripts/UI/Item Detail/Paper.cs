@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PaperDetail : MonoBehaviour
+public class Paper : MonoBehaviour
 {
     private int _paperIndex = 1;
     private GameObject[] _papers;
