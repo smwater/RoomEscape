@@ -52,6 +52,15 @@ public class PlayerMove : MonoBehaviour
                 transform.eulerAngles = new Vector3(0f, _rotateY, 0f);
                 HeadTransform.eulerAngles = new Vector3(_rotateX, _rotateY, 0f);
             }
+
+            if (_input.BowDown)
+            {
+                StartCoroutine(StandDown());
+            }
+            if (!_input.BowDown)
+            {
+                StartCoroutine(StandUp());
+            }
         }
     }
 
@@ -69,5 +78,25 @@ public class PlayerMove : MonoBehaviour
     public void MovementOff()
     {
         GameManager.Instance.PlayerCanMovement = false;
+    }
+
+    private IEnumerator StandUp()
+    {
+        for (float y = HeadTransform.position.y; y <= 3.5f; y += 0.01f)
+        {
+            _moveSpeed = 5f;
+            HeadTransform.position = new Vector3(HeadTransform.position.x, y, HeadTransform.position.z);
+            yield return null;
+        }
+    }
+
+    private IEnumerator StandDown()
+    {
+        for (float y = HeadTransform.position.y; y >= 1.9f; y -= 0.01f)
+        {
+            _moveSpeed = 1f;
+            HeadTransform.position = new Vector3(HeadTransform.position.x, y, HeadTransform.position.z);
+            yield return null;
+        }
     }
 }
