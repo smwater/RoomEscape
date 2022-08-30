@@ -13,4 +13,15 @@ public class PaperPuzzle : MonoBehaviour
     }
 
     public PuzzleNames PuzzleName;
+
+    private bool _isCount = false;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!_isCount && other.transform.GetComponent<PaperLocation>()?.LocationName == (PaperLocation.LocationNames)PuzzleName)
+        {
+            GameManager.Instance.SetPuzzleCount++;
+            _isCount = true;
+        }
+    }
 }

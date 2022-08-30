@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class GameManager : SingletonBehaviour<GameManager>
 {
+    public int SetPuzzleCount = 0;
     public bool PlayerCanMovement;
     public Dictionary<InventoryItem.ItemNames, bool> ItemHashmap = new Dictionary<InventoryItem.ItemNames, bool>();
 

@@ -24,6 +24,14 @@ public class Paper : MonoBehaviour
         GameManager.Instance.MergePaper.AddListener(Add);
     }
 
+    private void Update()
+    {
+        if (GameManager.Instance.SetPuzzleCount == 4)
+        {
+            Finished();
+        }
+    }
+
     private void OnDisable()
     {
         GameManager.Instance.MergePaper.RemoveListener(Add);
@@ -50,5 +58,15 @@ public class Paper : MonoBehaviour
         {
             GameManager.Instance.OnPuzzleBoard.Invoke();
         }
+    }
+
+    public void Finished()
+    {
+        for (int i = 0; i < _paperCount; i++)
+        {
+            _papers[i].SetActive(false);
+        }
+
+        _papers[4].SetActive(true);
     }
 }
