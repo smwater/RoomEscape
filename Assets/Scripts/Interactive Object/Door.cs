@@ -12,6 +12,8 @@ public class Door : MonoBehaviour, IInteractable
     private int _doorNum;
     private KeyLock _keyLock;
     private bool _isKeyLock;
+    private NumberLock _numberLock;
+    private bool _isNumberLock;
 
     private void Awake()
     {
@@ -34,6 +36,12 @@ public class Door : MonoBehaviour, IInteractable
         {
             _keyLock = GetComponent<KeyLock>();
             _isKeyLock = true;
+        }
+
+        if (transform.GetComponentInChildren<NumberLock>() != null)
+        {
+            _numberLock = GetComponentInChildren<NumberLock>();
+            _isNumberLock = true;
         }
     }
 
@@ -61,6 +69,11 @@ public class Door : MonoBehaviour, IInteractable
     public void Interact()
     {
         if (_isKeyLock && _keyLock.IsLock)
+        {
+            return;
+        }
+
+        if (_isNumberLock && _numberLock.IsLock)
         {
             return;
         }
