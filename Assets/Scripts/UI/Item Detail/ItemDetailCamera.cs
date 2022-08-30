@@ -10,7 +10,7 @@ public class ItemDetailCamera : MonoBehaviour
     private void Awake()
     {
         _camera = GetComponent<Camera>();
-        _distance = 700f;
+        _distance = 4000f;
     }
 
     private void Update()
