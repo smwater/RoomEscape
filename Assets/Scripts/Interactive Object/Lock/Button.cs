@@ -26,11 +26,12 @@ public class Button : MonoBehaviour, IInteractable
     private Outline _outline;
     private float _timer;
     private readonly float _timeLimit = 0.1f;
+    private AudioSource _audioSource;
 
     private void Awake()
     {
         _numberLock = GetComponentInParent<NumberLock>();
-
+        _audioSource = GetComponent<AudioSource>();
         _outline = gameObject.AddComponent<Outline>();
 
         _outline.OutlineMode = Outline.Mode.OutlineAll;
@@ -63,6 +64,8 @@ public class Button : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        _audioSource.Play();
+
         if (Name == Type.Confirm)
         {
             _numberLock.Confirm();
