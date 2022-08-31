@@ -32,9 +32,9 @@ public class Item : MonoBehaviour, IInteractable
         Inactive();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        _timer += Time.fixedDeltaTime;
+        _timer += Time.deltaTime;
 
         if (_timer >= _timeLimit)
         {
