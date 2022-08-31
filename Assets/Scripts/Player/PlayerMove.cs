@@ -34,37 +34,39 @@ public class PlayerMove : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.Instance.PlayerCanMovement)
+        if (!GameManager.Instance.PlayerCanMovement)
         {
-            _positionX = _input.X * _moveSpeed * Time.deltaTime;
-            _positionZ = _input.Y * _moveSpeed * Time.deltaTime;
+            return;
+        }
 
-            transform.Translate(_positionX, 0f, _positionZ, Space.Self);
+        _positionX = _input.X * _moveSpeed * Time.deltaTime;
+        _positionZ = _input.Y * _moveSpeed * Time.deltaTime;
 
-            if (_input.RightClick)
-            {
-                _rotateMoveY = _input.MouseMoveX * _rotateSpeed * Time.deltaTime;
-                _rotateMoveX = -_input.MouseMoveY * _rotateSpeed * Time.deltaTime;
+        transform.Translate(_positionX, 0f, _positionZ, Space.Self);
 
-                _rotateX += _rotateMoveX;
-                _rotateY = transform.eulerAngles.y + _rotateMoveY;
+        if (_input.RightClick)
+        {
+            _rotateMoveY = _input.MouseMoveX * _rotateSpeed * Time.deltaTime;
+            _rotateMoveX = -_input.MouseMoveY * _rotateSpeed * Time.deltaTime;
 
-                _rotateX = Mathf.Clamp(_rotateX, -90, 50);
+            _rotateX += _rotateMoveX;
+            _rotateY = transform.eulerAngles.y + _rotateMoveY;
 
-                transform.eulerAngles = new Vector3(0f, _rotateY, 0f);
-                HeadTransform.eulerAngles = new Vector3(_rotateX, _rotateY, 0f);
-            }
+            _rotateX = Mathf.Clamp(_rotateX, -90, 50);
 
-            if (_input.BowDown && !_sitDown)
-            {
-                StartCoroutine(SitDown());
-                _sitDown = true;
-            }
-            if (_input.BowDown && _sitDown)
-            {
-                StartCoroutine(StandUp());
-                _sitDown = false;
-            }
+            transform.eulerAngles = new Vector3(0f, _rotateY, 0f);
+            HeadTransform.eulerAngles = new Vector3(_rotateX, _rotateY, 0f);
+        }
+
+        if (_input.BowDown && !_sitDown)
+        {
+            StartCoroutine(SitDown());
+            _sitDown = true;
+        }
+        if (_input.BowDown && _sitDown)
+        {
+            StartCoroutine(StandUp());
+            _sitDown = false;
         }
     }
 
