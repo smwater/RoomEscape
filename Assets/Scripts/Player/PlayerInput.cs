@@ -43,7 +43,11 @@ public class PlayerInput : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            BowDown = !BowDown;
+            BowDown = true;
+        }
+        else
+        {
+            BowDown = false;
         }
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

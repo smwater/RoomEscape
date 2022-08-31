@@ -15,4 +15,10 @@ public class GameManager : SingletonBehaviour<GameManager>
     public UnityEvent ViewItemDetail = new UnityEvent();
     public UnityEvent CloseItemDetail = new UnityEvent();
     public UnityEvent OnPuzzleBoard = new UnityEvent();
+
+    private void Start()
+    {
+        PlayerCanMovement = true;
+    }
 }
+

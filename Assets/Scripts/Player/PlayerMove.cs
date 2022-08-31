@@ -10,6 +10,7 @@ public class PlayerMove : MonoBehaviour
     private float _positionX;
     private float _positionZ;
 
+    private bool _sitDown = false;
     private float _upDownSpeed = 0.03f;
 
     private float _rotateSpeed = 500f;
@@ -23,7 +24,6 @@ public class PlayerMove : MonoBehaviour
     private void Awake()
     {
         _input = GetComponent<PlayerInput>();
-        GameManager.Instance.PlayerCanMovement = true;
     }
 
     private void OnEnable()
@@ -55,13 +55,15 @@ public class PlayerMove : MonoBehaviour
                 HeadTransform.eulerAngles = new Vector3(_rotateX, _rotateY, 0f);
             }
 
-            if (_input.BowDown)
+            if (_input.BowDown && !_sitDown)
             {
                 StartCoroutine(SitDown());
+                _sitDown = true;
             }
-            if (!_input.BowDown)
+            if (_input.BowDown && _sitDown)
             {
                 StartCoroutine(StandUp());
+                _sitDown = false;
             }
         }
     }
@@ -86,11 +88,11 @@ public class PlayerMove : MonoBehaviour
     {
         for (float y = HeadTransform.position.y; y <= 3.5f; y += _upDownSpeed)
         {
-            GameManager.Instance.PlayerCanMovement = false;
+            MovementOff();
             _moveSpeed = 5f;
             HeadTransform.position = new Vector3(HeadTransform.position.x, y, HeadTransform.position.z);
             yield return null;
-            GameManager.Instance.PlayerCanMovement = true;
+            MovementOn();
         }
     }
 
@@ -98,11 +100,11 @@ public class PlayerMove : MonoBehaviour
     {
         for (float y = HeadTransform.position.y; y >= 1.9f; y -= _upDownSpeed)
         {
-            GameManager.Instance.PlayerCanMovement = false;
+            MovementOff();
             _moveSpeed = 1f;
             HeadTransform.position = new Vector3(HeadTransform.position.x, y, HeadTransform.position.z);
             yield return null;
-            GameManager.Instance.PlayerCanMovement = true;
+            MovementOn();
         }
     }
 }
