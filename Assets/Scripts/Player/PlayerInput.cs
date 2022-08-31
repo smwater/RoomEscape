@@ -53,6 +53,11 @@ public class PlayerInput : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, _distance, layerMask) && GameManager.Instance.PlayerCanMovement)
         {
+            if (hit.transform.GetComponent<IInteractable>() == null)
+            {
+                return;
+            }
+
             IInteractable interactable = hit.transform.GetComponent<IInteractable>();
 
             interactable.Active();
