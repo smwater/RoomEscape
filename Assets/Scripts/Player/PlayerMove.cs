@@ -10,6 +10,8 @@ public class PlayerMove : MonoBehaviour
     private float _positionX;
     private float _positionZ;
 
+    private float _upDownSpeed = 0.03f;
+
     private float _rotateSpeed = 500f;
     private float _rotateMoveX;
     private float _rotateX = 0f;
@@ -55,7 +57,7 @@ public class PlayerMove : MonoBehaviour
 
             if (_input.BowDown)
             {
-                StartCoroutine(StandDown());
+                StartCoroutine(SitDown());
             }
             if (!_input.BowDown)
             {
@@ -82,7 +84,7 @@ public class PlayerMove : MonoBehaviour
 
     private IEnumerator StandUp()
     {
-        for (float y = HeadTransform.position.y; y <= 3.5f; y += 0.01f)
+        for (float y = HeadTransform.position.y; y <= 3.5f; y += _upDownSpeed)
         {
             GameManager.Instance.PlayerCanMovement = false;
             _moveSpeed = 5f;
@@ -92,9 +94,9 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
-    private IEnumerator StandDown()
+    private IEnumerator SitDown()
     {
-        for (float y = HeadTransform.position.y; y >= 1.9f; y -= 0.01f)
+        for (float y = HeadTransform.position.y; y >= 1.9f; y -= _upDownSpeed)
         {
             GameManager.Instance.PlayerCanMovement = false;
             _moveSpeed = 1f;

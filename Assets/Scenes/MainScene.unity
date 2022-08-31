@@ -184,6 +184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HeadTransform: {fileID: 179228527}
+  _upDownSpeed: 0.03
 --- !u!54 &35617629
 Rigidbody:
   m_ObjectHideFlags: 0
