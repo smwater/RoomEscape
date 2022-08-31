@@ -6,6 +6,7 @@ public class ItemDetailCamera : MonoBehaviour
 {
     private Camera _camera;
     private float _distance;
+    private Vector3 _frontPosition = new Vector3(0f, 0f, -5f);
 
     private void Awake()
     {
@@ -23,6 +24,10 @@ public class ItemDetailCamera : MonoBehaviour
         if (Physics.Raycast(ray, out hit, _distance, layerMask))
         {
             if (Input.GetMouseButton(0))
+            {
+                hit.transform.position = Input.mousePosition + _frontPosition;
+            }
+            if (Input.GetMouseButtonUp(0))
             {
                 hit.transform.position = Input.mousePosition;
             }
