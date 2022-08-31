@@ -84,9 +84,11 @@ public class PlayerMove : MonoBehaviour
     {
         for (float y = HeadTransform.position.y; y <= 3.5f; y += 0.01f)
         {
+            GameManager.Instance.PlayerCanMovement = false;
             _moveSpeed = 5f;
             HeadTransform.position = new Vector3(HeadTransform.position.x, y, HeadTransform.position.z);
             yield return null;
+            GameManager.Instance.PlayerCanMovement = true;
         }
     }
 
@@ -94,9 +96,11 @@ public class PlayerMove : MonoBehaviour
     {
         for (float y = HeadTransform.position.y; y >= 1.9f; y -= 0.01f)
         {
+            GameManager.Instance.PlayerCanMovement = false;
             _moveSpeed = 1f;
             HeadTransform.position = new Vector3(HeadTransform.position.x, y, HeadTransform.position.z);
             yield return null;
+            GameManager.Instance.PlayerCanMovement = true;
         }
     }
 }
