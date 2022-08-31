@@ -55,7 +55,7 @@ public class PlayerInput : MonoBehaviour
         RaycastHit hit;
         int layerMask = 1 << LayerMask.NameToLayer("Interactive Item");
 
-        if (Physics.Raycast(ray, out hit, _distance, layerMask) && GameManager.Instance.PlayerCanMovement)
+        if (GameManager.Instance.PlayerCanMovement && Physics.Raycast(ray, out hit, _distance, layerMask))
         {
             if (hit.transform.GetComponent<IInteractable>() == null)
             {
