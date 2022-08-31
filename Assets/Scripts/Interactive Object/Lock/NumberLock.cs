@@ -15,21 +15,23 @@ public class NumberLock : MonoBehaviour
     private string _inputedPassword;
     private bool _onErrorLog;
 
+    private readonly int _outOfBoundNumber = -1;
+
     private void Awake()
     {
         IsLock = true;
-        InputNumber = -1;
+        InputNumber = _outOfBoundNumber;
         _blankNumberIndex = 0;
         _onErrorLog = false;
     }
 
     private void Update()
     {
-        if (InputNumber != -1 && _blankNumberIndex <= 3 && !_onErrorLog)
+        if (InputNumber != _outOfBoundNumber && _blankNumberIndex != _outOfBoundNumber && _blankNumberIndex <= 3 && !_onErrorLog)
         {
             _inputPassword[_blankNumberIndex] = InputNumber;
             _blankNumberIndex++;
-            InputNumber = -1;
+            InputNumber = _outOfBoundNumber;
 
             _inputedPassword = ArrayToString();
 
@@ -37,7 +39,7 @@ public class NumberLock : MonoBehaviour
         }
         else
         {
-            InputNumber = -1;
+            InputNumber = _outOfBoundNumber;
         }
     }
 
@@ -65,6 +67,7 @@ public class NumberLock : MonoBehaviour
         {
             InsertText.text = "Success";
             IsLock = false;
+            _blankNumberIndex = _outOfBoundNumber;
         }
         else
         {
