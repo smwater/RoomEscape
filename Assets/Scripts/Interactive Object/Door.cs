@@ -6,7 +6,7 @@ public class Door : MonoBehaviour, IInteractable
 {
     private Outline _outline;
     private float _timer;
-    private readonly float _timeLimit = 0.1f;
+    private readonly float _timeLimit = 0.3f;
     private Animator _animator;
     private bool _onoff;
     private int _doorNum;
