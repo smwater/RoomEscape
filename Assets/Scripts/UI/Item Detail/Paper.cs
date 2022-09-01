@@ -41,7 +41,7 @@ public class Paper : MonoBehaviour
     {
         int index = 0;
 
-        foreach (var item in GameManager.Instance.ItemHashmap)
+        foreach (var item in GameManager.Instance.ItemDictionary)
         {
             if (item.Value == true && item.Key != InventoryItem.ItemNames.Paper1)
             {
@@ -50,7 +50,7 @@ public class Paper : MonoBehaviour
             }
         }
 
-        GameManager.Instance.ItemHashmap.Remove((InventoryItem.ItemNames)index + 1);
+        GameManager.Instance.ItemDictionary.Remove((InventoryItem.ItemNames)index + 1);
 
         _papers[index].SetActive(true);
 

@@ -7,7 +7,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 {
     public int SetPuzzleCount = 0;
     public bool PlayerCanMovement;
-    public Dictionary<InventoryItem.ItemNames, bool> ItemHashmap = new Dictionary<InventoryItem.ItemNames, bool>();
+    public Dictionary<InventoryItem.ItemNames, bool> ItemDictionary = new Dictionary<InventoryItem.ItemNames, bool>();
 
     public UnityEvent Unlock = new UnityEvent();
     public UnityEvent UseKey = new UnityEvent();

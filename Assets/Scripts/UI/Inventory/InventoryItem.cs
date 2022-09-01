@@ -18,7 +18,7 @@ public class InventoryItem : MonoBehaviour
 
     public ItemNames ItemName;
 
-    public bool _active { get; private set; }
+    public bool Active { get; private set; }
 
     private InventorySlot _slot;
 
@@ -31,13 +31,13 @@ public class InventoryItem : MonoBehaviour
 
     private void Awake()
     {
-        _active = false;
+        Active = false;
         _slot = GetComponentInParent<InventorySlot>();
     }
 
     private void Update()
     {
-        if (_active)
+        if (Active)
         {
             _slot.Select();
         }
@@ -56,7 +56,7 @@ public class InventoryItem : MonoBehaviour
 
     public void UseKey()
     {
-        if (ItemName == ItemNames.Key && _active)
+        if (ItemName == ItemNames.Key && Active)
         {
             GameManager.Instance.Unlock.Invoke();
             _slot.NotExsited();
@@ -66,19 +66,19 @@ public class InventoryItem : MonoBehaviour
 
     public void MergePaper()
     {
-        if (ItemName == ItemNames.Paper2 && _active)
+        if (ItemName == ItemNames.Paper2 && Active)
         {
             _slot.NotExsited();
             Destroy(gameObject);
         }
 
-        if (ItemName == ItemNames.Paper3 && _active)
+        if (ItemName == ItemNames.Paper3 && Active)
         {
             _slot.NotExsited();
             Destroy(gameObject);
         }
 
-        if (ItemName == ItemNames.Paper4 && _active)
+        if (ItemName == ItemNames.Paper4 && Active)
         {
             _slot.NotExsited();
             Destroy(gameObject);
@@ -88,26 +88,26 @@ public class InventoryItem : MonoBehaviour
 
     public void TogleActive()
     {
-        _active = !_active;
+        Active = !Active;
 
-        if (_active)
+        if (Active)
         {
-            GameManager.Instance.ItemHashmap.Add(ItemName, true);
+            GameManager.Instance.ItemDictionary.Add(ItemName, true);
         }
         else
         {
-            GameManager.Instance.ItemHashmap.Remove(ItemName);
+            GameManager.Instance.ItemDictionary.Remove(ItemName);
         }
     }
 
     public void Inactive()
     {
-        _active = false;
+        Active = false;
     }
 
     public void ShowDetail()
     {
-        if (ItemName == ItemNames.Paper1 && _active)
+        if (ItemName == ItemNames.Paper1 && Active)
         {
             GameManager.Instance.ViewItemDetail.Invoke();
         }

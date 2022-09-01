@@ -45,6 +45,6 @@ public class ItemDetailUI : MonoBehaviour
             _childs[i].SetActive(false);
         }
 
-        GameManager.Instance.ItemHashmap.Remove(InventoryItem.ItemNames.Paper1);
+        GameManager.Instance.ItemDictionary.Remove(InventoryItem.ItemNames.Paper1);
     }
 }
