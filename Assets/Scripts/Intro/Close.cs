@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Close : MonoBehaviour
 {
-    public GameObject[] Components = new GameObject[3];
+    public GameObject ManualObject;
+    public GameObject HideComponents;
+    public GameObject ShowComponents;
 
     public void Click()
     {
-        for (int i = 0; i < 3; i++)
-        {
-            Components[i].SetActive(false);
-        }
+        ManualObject.SetActive(false);
+        HideComponents.SetActive(false);
+        ShowComponents.SetActive(true);
     }
 }
