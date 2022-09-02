@@ -53,9 +53,8 @@ public class PlayerInput : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         Debug.DrawRay(ray.origin, ray.direction * _distance, Color.green);
         RaycastHit hit;
-        int layerMask = 1 << LayerMask.NameToLayer("Interactive Item");
 
-        if (GameManager.Instance.PlayerCanMovement && Physics.Raycast(ray, out hit, _distance, layerMask))
+        if (GameManager.Instance.PlayerCanMovement && Physics.Raycast(ray, out hit, _distance))
         {
             if (hit.transform.GetComponent<IInteractable>() == null)
             {
