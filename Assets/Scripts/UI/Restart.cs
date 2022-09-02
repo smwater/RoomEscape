@@ -8,6 +8,6 @@ public class Restart : MonoBehaviour
     public void Click()
     {
         GameManager.Instance.PlayerCanMovement = true;
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 }
