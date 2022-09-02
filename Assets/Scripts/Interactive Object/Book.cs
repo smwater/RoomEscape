@@ -6,7 +6,7 @@ public class Book : MonoBehaviour, IInteractable
 {
     private Outline _outline;
     private float _timer;
-    private readonly float _timeLimit = 0.3f;
+    private readonly float _timeLimit = 0.1f;
 
     private void Awake()
     {
