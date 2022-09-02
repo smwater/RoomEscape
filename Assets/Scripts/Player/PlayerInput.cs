@@ -11,6 +11,7 @@ public class PlayerInput : MonoBehaviour
     public float MouseMoveX { get; private set; }
     public float MouseMoveY { get; private set; }
     public bool BowDown { get; private set; }
+    public bool Pause { get; private set; }
 
     private float _distance = 4f;
 
@@ -48,6 +49,15 @@ public class PlayerInput : MonoBehaviour
         else
         {
             BowDown = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Pause = true;
+        }
+        else
+        {
+            Pause = false;
         }
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
