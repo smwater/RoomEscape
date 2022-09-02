@@ -1,4 +1,4 @@
-using System.Collections;
+    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -49,12 +49,6 @@ public class NumberLock : MonoBehaviour
 
         for (int i = 0; i < _inputPassword.Length; i++)
         {
-            if (_inputPassword[i] == 0)
-            {
-                password += "0";
-                continue;
-            }
-            
             password += _inputPassword[i].ToString();
         }
 
