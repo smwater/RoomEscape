@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Fade : MonoBehaviour
 {
+    public GameObject EndComponent;
+
     private Image _image;
 
     private void Awake()
@@ -42,7 +44,7 @@ public class Fade : MonoBehaviour
             _image.color = new Color(255, 255, 255, fadeCount);
         }
 
-        Application.Quit();
+        EndComponent.gameObject.SetActive(true);
     }
 
     private IEnumerator Out()
