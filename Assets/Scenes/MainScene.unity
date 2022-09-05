@@ -936,6 +936,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba6d2442fb98cc4380eed4876938d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FixedCoordX: 71
+  FixedCoordY: -51
   PuzzleName: 4
 --- !u!65 &212865827
 BoxCollider:
@@ -3178,6 +3180,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba6d2442fb98cc4380eed4876938d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FixedCoordX: -85
+  FixedCoordY: 43
   PuzzleName: 1
 --- !u!65 &675864688
 BoxCollider:
@@ -5780,6 +5784,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba6d2442fb98cc4380eed4876938d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FixedCoordX: 80
+  FixedCoordY: 40
   PuzzleName: 2
 --- !u!65 &1087548320
 BoxCollider:
@@ -8659,6 +8665,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba6d2442fb98cc4380eed4876938d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FixedCoordX: -64
+  FixedCoordY: -46
   PuzzleName: 3
 --- !u!65 &1522853647
 BoxCollider:

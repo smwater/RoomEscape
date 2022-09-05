@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PaperPuzzle : MonoBehaviour
 {
+    public float FixedCoordX;
+    public float FixedCoordY;
     public enum PuzzleNames
     {
         Paper1 = 1,
@@ -15,6 +17,22 @@ public class PaperPuzzle : MonoBehaviour
     public PuzzleNames PuzzleName;
 
     private bool _isCount = false;
+    private Transform _parentTransform;
+    private BoxCollider _parentBoxCollider;
+
+    private void Awake()
+    {
+        _parentTransform = transform.parent.GetComponent<Transform>();
+        _parentBoxCollider = _parentTransform.GetComponent<BoxCollider>();
+    }
+
+    private void Update()
+    {
+        if (_isCount)
+        {
+            _parentTransform.localPosition = new Vector3(FixedCoordX, FixedCoordY, 0f);
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -22,6 +40,7 @@ public class PaperPuzzle : MonoBehaviour
         {
             GameManager.Instance.SetPuzzleCount++;
             _isCount = true;
+            _parentBoxCollider.enabled = false;
         }
     }
 }
