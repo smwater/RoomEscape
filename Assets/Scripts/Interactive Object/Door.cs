@@ -14,6 +14,7 @@ public class Door : MonoBehaviour, IInteractable
     private bool _isKeyLock;
     private NumberLock _numberLock;
     private bool _isNumberLock;
+    private bool _isEscape = false;
 
     private void Awake()
     {
@@ -54,6 +55,12 @@ public class Door : MonoBehaviour, IInteractable
             Inactive();
             _timer = 0f;
         }
+
+        if (!_isEscape && _onoff && _isKeyLock && !_keyLock.IsLock)
+        {
+            GameManager.Instance.Escape.Invoke();
+            _isEscape = true;
+        }
     }
 
     public void Active()
@@ -87,6 +94,6 @@ public class Door : MonoBehaviour, IInteractable
 
         _onoff = !_onoff;
 
-        _animator.SetBool(keyword, _onoff); 
+        _animator.SetBool(keyword, _onoff);
     }
 }

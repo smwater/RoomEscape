@@ -15,6 +15,7 @@ public class GameManager : SingletonBehaviour<GameManager>
     public UnityEvent ViewItemDetail = new UnityEvent();
     public UnityEvent CloseItemDetail = new UnityEvent();
     public UnityEvent OnPuzzleBoard = new UnityEvent();
+    public UnityEvent Escape = new UnityEvent();
 
     private void Start()
     {
